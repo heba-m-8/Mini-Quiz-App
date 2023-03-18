@@ -107,17 +107,32 @@
 
     <Button
         android:id="@+id/scoreButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="101dp"
-        android:layout_marginEnd="101dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="170dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="28dp"
         android:background="#FFFFFF"
         android:foregroundTint="#FFFFFF"
         android:text="Calculate my Score!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="170dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="28dp"
+        android:background="#FFFFFF"
+        android:foregroundTint="#FFFFFF"
+        android:text="Play Again"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Spinner
@@ -149,12 +164,13 @@
 
     <TextView
         android:id="@+id/scoreTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="54dp"
+        android:layout_height="21dp"
         android:layout_marginStart="177dp"
-        android:layout_marginEnd="176dp"
+        android:layout_marginEnd="177dp"
         android:layout_marginBottom="12dp"
         android:text="Score"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/scoreButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         val button: Button = findViewById(id.scoreButton)
         val resultTV: TextView = findViewById(id.scoreTxt)
+        val buttonReset: Button = findViewById(id.resetButton)
 
         var answer1 : String = "Mercury"
         val spinnerVal : Spinner = findViewById(id.spinner1)
@@ -90,20 +91,28 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        var score: Int = 0
         button.setOnClickListener{ view ->
-            if(answer1 == "Mercury")
-                score++
-            if(answer2 == "5")
-                score++
-            if(answer3 == "Pacific")
-                score++
-            if(answer4 == "3")
-                score++
-            if(answer5 == "Femur")
-                score++
-            resultTV.text = score.toString()
+          resultTV.text = calculate_score(answer1, answer2, answer3, answer4, answer5).toString()
+        }
+
+        buttonReset.setOnClickListener{ view ->
+            resultTV.text = calculate_score(answer1, answer2, answer3, answer4, answer5).toString()
         }
     }
 
+}
+public fun calculate_score(answer1: String, answer2: String, answer3: String, answer4: String, answer5: String ): Int {
+    var score: Int = 0
+
+    if(answer1 == "Mercury")
+        score++
+    if(answer2 == "5")
+        score++
+    if(answer3 == "Pacific")
+        score++
+    if(answer4 == "3")
+        score++
+    if(answer5 == "Femur")
+        score++
+    return score
 }
